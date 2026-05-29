@@ -18,16 +18,8 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
-                capabilities = capabilities
-            })
-			lspconfig.ts_ls.setup({
-                capabilities = capabilities
-            })
-			lspconfig.kotlin_language_server.setup({
-                capabilities = capabilities
-            })
+			vim.lsp.config("*", { capabilities = capabilities })
+			vim.lsp.enable({ "lua_ls", "ts_ls", "kotlin_language_server" })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
