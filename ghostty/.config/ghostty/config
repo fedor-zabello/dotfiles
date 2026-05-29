@@ -44,7 +44,7 @@
 
 # ================
 font-size = 11
-theme = zenwritten_dark
+theme = Tomorrow Night Bright
 
 shell-integration = fish
 background-opacity = 0.95
