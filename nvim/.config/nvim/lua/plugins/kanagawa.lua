@@ -4,6 +4,6 @@ return {
 	priority = 1000, -- make sure to load this before all the other start plugins
 	theme = "wave",
 	config = function()
-		vim.cmd("colorscheme kanagawa-wave")
+		vim.cmd("colorscheme kanagawa-dragon")
 	end,
 }
